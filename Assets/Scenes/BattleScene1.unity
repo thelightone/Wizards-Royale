@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 893ae9338d522eb47a623f5513f8de6d
+  m_OcclusionCullingData: {fileID: 36300000, guid: 575aa07900d6ed14ea18976fc8548702, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -8818,6 +8818,8 @@ MonoBehaviour:
   _musicSource: {fileID: 1826612002}
   _winClip: {fileID: 8300000, guid: dc4c4c8a2379acf4591b744d78e625c5, type: 3}
   _loseClip: {fileID: 8300000, guid: ce2f361ab46d2b2419fc9a03bbdf969d, type: 3}
+  musicOnBtn: {fileID: 0}
+  musicOffBtn: {fileID: 0}
 --- !u!1 &1912598052
 GameObject:
   m_ObjectHideFlags: 0
