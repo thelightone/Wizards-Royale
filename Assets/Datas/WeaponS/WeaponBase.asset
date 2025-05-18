@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d38f134493b537649a10d25e500ee9d4, type: 3}
+  m_Name: WeaponBase
+  m_EditorClassIdentifier: 
+  weaponName: WeaponBase
+  weaponIcon: {fileID: 21300000, guid: 5b56d9fa0e8bd6e409ed188db38a692c, type: 3}
+  projectilePrefab: {fileID: 5299575304468656024, guid: 0a04a083caea10d4db1c80be85530dc7, type: 3}
+  damage: 5
+  range: 5
+  shootingCooldown: 10
+  projectileSpeed: 20
+  minShootingDistance: 0.5
+  isShotgun: 0
+  isGrenade: 0
+  isAutomatic: 0
+  pelletCount: 5
+  spreadAngle: 15
+  explosionRadius: 3
+  fuseTime: 3
+  minThrowDistance: 2
+  maxThrowDistance: 10
+  explosionEffect: {fileID: 0}
+  explosionSound: {fileID: 0}
+  fireRate: 0.1
+  burstSize: 3
+  burstCooldown: 1
+  shootEffect: {fileID: 1402276447395380, guid: 093967bb4185b304c8594f9c99dab6c1, type: 3}
+  shootSound: {fileID: 8300000, guid: b55d28791a789884c9d154cb38b12a63, type: 3}
+  hitEffect: {fileID: 1644327090161464, guid: 709f018bde6c3c74a89ca5ed225f9768, type: 3}
+  slowEffect: 0
+  slowDuration: 3
+  stunEffect: {fileID: 0}
+  poisonEffect: {fileID: 0}
+  effectDuration: 3
+  isExplosive: 0
+  isPiercing: 0

@@ -1,0 +1,10 @@
+# ninja log v5
+24	963	7691218510465739	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	cb568ad6dbc1c8cf
+1	975	7691218510639603	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	29fd66f44e7195bb
+36	992	7691218510843924	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	cf4cba3103df556d
+28	1015	7691218510935272	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	5509f14aa21dc4d1
+32	1016	7691218511016776	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	c77e021dc44691aa
+16	1058	7691218511507728	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	ff97c696f1c2e4f3
+20	1115	7691218512017815	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	7f32e6b3b25020cf
+11	1146	7691218512292865	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	d35fc937ebd12ad4
+1146	1275	7691218513708209	C:/Users/asus/UnityProjects/BrawlStars/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/6e1u5531/obj/arm64-v8a/libgame.so	822a2b84cce04864

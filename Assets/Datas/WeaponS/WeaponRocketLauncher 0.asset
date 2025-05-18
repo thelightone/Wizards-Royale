@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d38f134493b537649a10d25e500ee9d4, type: 3}
+  m_Name: WeaponRocketLauncher 0
+  m_EditorClassIdentifier: 
+  weaponName: Rocket Launcher
+  weaponIcon: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  projectilePrefab: {fileID: 5299575304468656024, guid: ec042f5b2c7c7eb4faa631095129a367, type: 3}
+  damage: 10
+  range: 10
+  shootingCooldown: 0.5
+  projectileSpeed: 20
+  minShootingDistance: 0.5
+  isShotgun: 0
+  isGrenade: 0
+  isAutomatic: 0
+  pelletCount: 5
+  spreadAngle: 15
+  explosionRadius: 3
+  fuseTime: 3
+  minThrowDistance: 2
+  maxThrowDistance: 10
+  explosionEffect: {fileID: 1103802188680732, guid: 12bab56b530183645b603a3d7e3b606d, type: 3}
+  explosionSound: {fileID: 8300000, guid: 71e4161e886cddc49a8d10277ee7248f, type: 3}
+  fireRate: 0.1
+  burstSize: 3
+  burstCooldown: 1
+  shootEffect: {fileID: 1831050364761986, guid: 92dfef5d6e786c1419be3a64b01fb3e7, type: 3}
+  shootSound: {fileID: 8300000, guid: 71e4161e886cddc49a8d10277ee7248f, type: 3}
+  hitEffect: {fileID: 1103802188680732, guid: 12bab56b530183645b603a3d7e3b606d, type: 3}
+  slowEffect: 0
+  slowDuration: 3
+  stunEffect: {fileID: 0}
+  poisonEffect: {fileID: 0}
+  effectDuration: 3
+  isExplosive: 1
+  isPiercing: 0

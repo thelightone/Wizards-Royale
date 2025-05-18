@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d38f134493b537649a10d25e500ee9d4, type: 3}
+  m_Name: WeaponAutomat 0
+  m_EditorClassIdentifier: 
+  weaponName: Automat
+  weaponIcon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  projectilePrefab: {fileID: 5299575304468656024, guid: 868acc45eb93de745b3183befeee472f, type: 3}
+  damage: 10
+  range: 10
+  shootingCooldown: 0.5
+  projectileSpeed: 20
+  minShootingDistance: 0.5
+  isShotgun: 0
+  isGrenade: 0
+  isAutomatic: 1
+  pelletCount: 5
+  spreadAngle: 15
+  explosionRadius: 3
+  fuseTime: 3
+  minThrowDistance: 0.1
+  maxThrowDistance: 5
+  explosionEffect: {fileID: 0}
+  explosionSound: {fileID: 0}
+  fireRate: 0.3
+  burstSize: 3
+  burstCooldown: 1
+  shootEffect: {fileID: 1866083959391484, guid: b9fb9463d2136cd42a3ddf606f7a3fa8, type: 3}
+  shootSound: {fileID: 8300000, guid: 6ca0ec37135e53644a5cd13671a5c998, type: 3}
+  hitEffect: {fileID: 1770312703653136, guid: 69f5a9eca5f20c94886a4ced31bea3d0, type: 3}
+  slowEffect: 0
+  slowDuration: 3
+  stunEffect: {fileID: 0}
+  poisonEffect: {fileID: 0}
+  effectDuration: 3
+  isExplosive: 0
+  isPiercing: 0
