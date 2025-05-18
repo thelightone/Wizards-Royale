@@ -1118,6 +1118,8 @@ MonoBehaviour:
   _musicSource: {fileID: 1172387715}
   _winClip: {fileID: 8300000, guid: dc4c4c8a2379acf4591b744d78e625c5, type: 3}
   _loseClip: {fileID: 8300000, guid: ce2f361ab46d2b2419fc9a03bbdf969d, type: 3}
+  musicOnBtn: {fileID: 0}
+  musicOffBtn: {fileID: 0}
 --- !u!82 &1172387715
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2261,6 +2263,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 784071070009388637, guid: 76bf4aa5f42af4c47a1d37fcb8a32709, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404401162279440097, guid: 76bf4aa5f42af4c47a1d37fcb8a32709, type: 3}
+      propertyPath: m_RenderPostProcessing
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3115932160885625184, guid: 76bf4aa5f42af4c47a1d37fcb8a32709, type: 3}
