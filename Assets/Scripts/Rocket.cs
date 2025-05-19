@@ -146,12 +146,9 @@ public class Rocket : MonoBehaviour
             IDamageable damageable = collider.GetComponent<IDamageable>();
             if (damageable != null)
             {
-                // Вычисляем урон в зависимости от расстояния
-                float distance = Vector3.Distance(transform.position, collider.transform.position);
-                float damageMultiplier = 1f - (distance / _weaponData.explosionRadius);
-                float damage = _weaponData.damage * damageMultiplier;
-                
-                damageable.TakeDamage(damage);
+                // Наносим полный урон всем целям в радиусе взрыва
+                damageable.TakeDamage(_weaponData.damage);
+                Debug.Log($"Нанесен урон {_weaponData.damage} объекту {collider.gameObject.name}");
             }
         }
 

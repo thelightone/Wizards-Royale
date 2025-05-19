@@ -323,48 +323,48 @@ public class Grenade : MonoBehaviour
         // Наносим урон всем объектам в радиусе
         foreach (Collider collider in colliders)
         {
-            // Проверяем, не является ли объект владельцем или объектом того же типа
-            if (_owner != null)
+            // Пропускаем самого владельца
+            if (collider.gameObject == _owner)
             {
-                // Если граната от врага, она не должна наносить урон другим врагам
-                if (_owner.CompareTag("Enemy") && collider.gameObject.CompareTag("Enemy"))
+                continue;
+            }
+            
+            // Проверяем, не является ли объект дочерним объектом владельца
+            Transform current = collider.transform;
+            bool isOwnerChild = false;
+            while (current != null)
+            {
+                if (current.gameObject == _owner)
                 {
-                    continue;
+                    isOwnerChild = true;
+                    break;
                 }
-                
-                // Если граната от игрока, она не должна наносить урон игроку
-                if (_owner.CompareTag("Player") && collider.gameObject.CompareTag("Player"))
+                current = current.parent;
+            }
+            if (isOwnerChild)
+            {
+                continue;
+            }
+            
+            // Проверка на командную принадлежность, если есть компонент Player
+            if (_owner != null && _owner.TryGetComponent<Player>(out Player ownerPlayer))
+            {
+                if (collider.gameObject.TryGetComponent<Player>(out Player targetPlayer))
                 {
-                    continue;
+                    // Если они в одной команде, пропускаем
+                    if (ownerPlayer.team == targetPlayer.team)
+                    {
+                        continue;
+                    }
                 }
             }
 
-            // Наносим урон всем объектам в радиусе
             IDamageable damageable = collider.GetComponent<IDamageable>();
             if (damageable != null)
             {
-                // Вычисляем урон в зависимости от расстояния
-                float distance = Vector3.Distance(transform.position, collider.transform.position);
-                
-                // Улучшенная формула урона с более сильным центральным поражением
-                float damagePercent;
-                if (distance < _weaponData.explosionRadius * 0.3f)
-                {
-                    // В центре взрыва - полный урон
-                    damagePercent = 1.0f;
-                }
-                else
-                {
-                    // Дальше от центра - спадающий урон по квадратичной формуле
-                    float normalizedDistance = (distance - _weaponData.explosionRadius * 0.3f) / 
-                                               (_weaponData.explosionRadius * 0.7f);
-                    damagePercent = 1.0f - normalizedDistance * normalizedDistance;
-                }
-                
-                float damage = _weaponData.damage * damagePercent;
-                
-                damageable.TakeDamage(damage);
-                Debug.Log($"Нанесен урон {damage:F1} объекту {collider.gameObject.name} (дист: {distance:F2}, %: {damagePercent:P0})");
+                // Наносим полный урон всем целям в радиусе взрыва
+                damageable.TakeDamage(_weaponData.damage);
+                Debug.Log($"Нанесен урон {_weaponData.damage} объекту {collider.gameObject.name}");
             }
         }
 

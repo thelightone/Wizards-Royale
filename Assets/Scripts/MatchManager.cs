@@ -37,6 +37,9 @@ public class MatchManager : MonoBehaviour
 
     public GameObject startPanel;
 
+    private bool bigFont;
+    public TMP_Text timeOverText;
+
     private void Awake()
     {
         inMatch = false;
@@ -77,6 +80,14 @@ public class MatchManager : MonoBehaviour
         {
             matchTime -= Time.deltaTime;
 
+            if (matchTime < 6 && !bigFont)
+            {
+                bigFont = true;
+                timer.fontSize = 100;
+                timer.rectTransform.localPosition = new Vector3(timer.rectTransform.localPosition.x, timer.rectTransform.localPosition.y-130, timer.rectTransform.localPosition.z);
+                timer.color = new Color(1,1,1,0.7f);
+            }
+
             if (matchTime <= 0)
             {
                 FinishMatch();
@@ -89,32 +100,40 @@ public class MatchManager : MonoBehaviour
 
     private void FinishMatch()
     {
+        StartCoroutine(FinishMatchCor());
+    }
+
+    private IEnumerator FinishMatchCor()
+    {
         inMatch = false;
+
+        if (blueScores > redScores)
+        {
+            Audio.instance.PlayWin();
+        }
+        else
+        {
+            Audio.instance.PlayLose();
+        }
+
+        timeOverText.gameObject.SetActive(true);
+        timer.gameObject.SetActive(false);
 
         PlayerPrefs.SetInt("battles", PlayerPrefs.GetInt("battles") + 1);
         PlayerPrefs.SetInt("gold", PlayerPrefs.GetInt("gold") + 100);
 
+        yield return new WaitForSeconds(2);
+
         if (blueScores > redScores)
         {
-            Win();
+            winPanel.SetActive(true);
         }
         else
         {
-            Lose();
+            losePanel.SetActive(true);
         }
     }
 
-    private void Lose()
-    {
-        losePanel.SetActive(true);
-        Audio.instance.PlayLose();
-    }
-
-    private void Win()
-    {
-        winPanel.SetActive(true);
-        Audio.instance.PlayWin();
-    }
 
     public void PlayerDeath(GameObject player)
     {

@@ -162,7 +162,8 @@ public class MenuManager : MonoBehaviour
 
         while (!op.isDone)
         {
-            loadingText.text = "Loading... " + op.progress*100+"%";
+            loadingText.text = "Loading... " + Convert.ToInt32(op.progress*100)+"%";
+            Debug.Log(Convert.ToInt32(op.progress * 100));
             yield return null;  
         }
     }
