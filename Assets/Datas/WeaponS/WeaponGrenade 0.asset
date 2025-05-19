@@ -15,9 +15,9 @@ MonoBehaviour:
   weaponName: Grenade
   weaponIcon: {fileID: 21300000, guid: 010a6e5305fa7004f89c5d317b7b47d4, type: 3}
   projectilePrefab: {fileID: 5299575304468656024, guid: 5d7f781be6218a746b90ca7bdc66d3f9, type: 3}
-  damage: 5
+  damage: 250
   range: 10
-  shootingCooldown: 0.5
+  shootingCooldown: 1.5
   projectileSpeed: 20
   minShootingDistance: 0.5
   isShotgun: 0

@@ -15,9 +15,9 @@ MonoBehaviour:
   weaponName: Shootgun
   weaponIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   projectilePrefab: {fileID: 5299575304468656024, guid: 94ad7e87fcb062a4fa0c2267480a23e1, type: 3}
-  damage: 10
-  range: 10
-  shootingCooldown: 0.5
+  damage: 200
+  range: 5
+  shootingCooldown: 1.5
   projectileSpeed: 20
   minShootingDistance: 0.5
   isShotgun: 1

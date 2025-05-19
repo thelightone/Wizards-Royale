@@ -15,10 +15,10 @@ MonoBehaviour:
   weaponName: WeaponBlade
   weaponIcon: {fileID: 21300000, guid: 5b56d9fa0e8bd6e409ed188db38a692c, type: 3}
   projectilePrefab: {fileID: 7627589873869438063, guid: 8b8efd550d8869e4f873c6ea995d849e, type: 3}
-  damage: 5
+  damage: 400
   range: 5
   shootingCooldown: 1
-  projectileSpeed: 0
+  projectileSpeed: 5
   minShootingDistance: 0.5
   isShotgun: 0
   isGrenade: 0

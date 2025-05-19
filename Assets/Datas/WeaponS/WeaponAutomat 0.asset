@@ -15,9 +15,9 @@ MonoBehaviour:
   weaponName: Automat
   weaponIcon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   projectilePrefab: {fileID: 5299575304468656024, guid: 868acc45eb93de745b3183befeee472f, type: 3}
-  damage: 10
-  range: 10
-  shootingCooldown: 0.5
+  damage: 200
+  range: 8
+  shootingCooldown: 1.5
   projectileSpeed: 20
   minShootingDistance: 0.5
   isShotgun: 0

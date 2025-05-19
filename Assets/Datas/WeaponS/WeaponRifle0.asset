@@ -15,9 +15,9 @@ MonoBehaviour:
   weaponName: Rifle
   weaponIcon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   projectilePrefab: {fileID: 5299575304468656024, guid: 6d6ee130fa7157d4e9f8524207e686ee, type: 3}
-  damage: 10
-  range: 10
-  shootingCooldown: 0.5
+  damage: 400
+  range: 12
+  shootingCooldown: 1
   projectileSpeed: 20
   minShootingDistance: 0.5
   isShotgun: 0

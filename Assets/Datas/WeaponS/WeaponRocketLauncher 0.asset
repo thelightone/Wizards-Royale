@@ -15,9 +15,9 @@ MonoBehaviour:
   weaponName: Rocket Launcher
   weaponIcon: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   projectilePrefab: {fileID: 5299575304468656024, guid: ec042f5b2c7c7eb4faa631095129a367, type: 3}
-  damage: 10
-  range: 10
-  shootingCooldown: 0.5
+  damage: 250
+  range: 8
+  shootingCooldown: 1.5
   projectileSpeed: 20
   minShootingDistance: 0.5
   isShotgun: 0
