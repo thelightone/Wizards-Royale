@@ -37,6 +37,8 @@ public class EnemyBrain : MonoBehaviour
 
     [SerializeField] private TMP_Text _name;
 
+    private Health _health;
+
     private void Start()
     {
         _player = FindAnyObjectByType<PlayerController>().transform;
@@ -44,6 +46,7 @@ public class EnemyBrain : MonoBehaviour
         _animator = GetComponent<CharacterSkinManager>()?.GetCurrentAnimatorAndWeapon();
         SetRandomSkinAndWeapon();
         _enemyAttack = GetComponent<EnemyAttack>();
+        _health = GetComponent<Health>();
         _enemyAttack.SetWeaponAndAnimator(_enemyWeapon, _animator);
         _enemyRange = _enemyWeapon.range;
         _reloadTime = _enemyWeapon.shootingCooldown;
@@ -184,6 +187,11 @@ public class EnemyBrain : MonoBehaviour
 
     private void SetPatrolPoint()
     {
+        if(Random.Range(0,5)==0)
+        {
+            _health.ActivateShield();
+        }
+
         aimPlayer = MatchManager.instance.playersList[Random.Range(0, MatchManager.instance.playersList.Count)];
         Transform newAim = aimPlayer.transform;
 

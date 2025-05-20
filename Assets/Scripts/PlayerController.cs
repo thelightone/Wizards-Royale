@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterSkinManager))]
 [RequireComponent(typeof(Rigidbody))]
@@ -21,7 +23,11 @@ public class PlayerController : MonoBehaviour
     private ShootingController _shootingController;
     private CharacterSkinManager _skinManager;
     private Health _health;
-    
+
+    [SerializeField] private Image _cooldownIndicator;
+    private float _lastRushTime;
+    private bool _rushReload;
+
     private void Start()
     {
         // Получаем необходимые компоненты
@@ -49,12 +55,29 @@ public class PlayerController : MonoBehaviour
         {
             HandleMovement();
         }
+        else
+        {
+            _rb.linearVelocity = Vector3.zero;
+            _rb.angularVelocity = Vector3.zero;
+
+        }
+
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        if (_cooldownIndicator != null)
+        {
+            float cooldownProgress = (Time.time - _lastRushTime) / 5;
+            _cooldownIndicator.fillAmount = Mathf.Clamp01(cooldownProgress);
+        }
     }
 
     private void HandleMovement()
     {
         // Сбрасываем скорости
-        _rb.linearVelocity = Vector3.zero;
+        //_rb.linearVelocity = Vector3.zero;
         _rb.angularVelocity = Vector3.zero;
         
         // Получаем ввод игрока
@@ -137,5 +160,26 @@ public class PlayerController : MonoBehaviour
     public void Roll()
     {
         _animator.SetTrigger("Roll");
+    }
+
+    public void Rush()
+    {
+        if (!_rushReload)
+        {
+            _rushReload = true;
+            _maxMoveSpeed = 30;
+            _accelerationSpeed = 30;
+            _lastRushTime = Time.time;
+            StartCoroutine(RushCor());
+        }
+    }
+
+    private IEnumerator RushCor()
+    {
+        yield return new WaitForSeconds(0.1f);
+        _maxMoveSpeed = 5;
+        _accelerationSpeed = 5;
+        yield return new WaitForSeconds(5f);
+        _rushReload = false;
     }
 }

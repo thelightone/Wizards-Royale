@@ -193,55 +193,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4902217643513374, guid: d67079981e29a6343a1a95e1725c5ddb, type: 3}
   m_PrefabInstance: {fileID: 76182528}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &104664796
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 104664798}
-  - component: {fileID: 104664797}
-  m_Layer: 0
-  m_Name: Global Volume
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &104664797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104664796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IsGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: 10fc4df2da32a41aaa32d77bc913491c, type: 2}
---- !u!4 &104664798
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104664796}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1266, y: 426.3702, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &150981681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61479,7 +61430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4099358466520390246, guid: 76bf4aa5f42af4c47a1d37fcb8a32709, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.9999866
+      value: 2.9999847
       objectReference: {fileID: 0}
     - target: {fileID: 4250084160694462184, guid: 76bf4aa5f42af4c47a1d37fcb8a32709, type: 3}
       propertyPath: m_LocalPosition.z
@@ -84922,7 +84873,6 @@ SceneRoots:
   - {fileID: 1478178156}
   - {fileID: 873666810}
   - {fileID: 1912598053}
-  - {fileID: 104664798}
   - {fileID: 174126523}
   - {fileID: 1656831015}
   - {fileID: 1172387716}

@@ -1,0 +1,1 @@
+C:\Users\asus\Documents\GitHub\Wizards-Royale\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\4e2e2s6q\obj\arm64-v8a
