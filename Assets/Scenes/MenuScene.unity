@@ -217,6 +217,10 @@ MonoBehaviour:
   locked: {fileID: 0}
   unlocked: 0
   character: {fileID: 121076831}
+  damage: 0
+  range: 0
+  cooldown: 0
+  feature: 
 --- !u!114 &180379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,7 +567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -165, y: 113.4}
+  m_AnchoredPosition: {x: -165, y: 113.399994}
   m_SizeDelta: {x: 165.48999, y: 79.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &60351852
@@ -2448,6 +2452,10 @@ MonoBehaviour:
   locked: {fileID: 0}
   unlocked: 0
   character: {fileID: 1277744587}
+  damage: 0
+  range: 0
+  cooldown: 0
+  feature: 
 --- !u!1 &359909715
 GameObject:
   m_ObjectHideFlags: 0
@@ -3115,7 +3123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 111.79999, y: 102}
+  m_AnchoredPosition: {x: 111.79993, y: 102}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &576527071
@@ -3554,6 +3562,10 @@ MonoBehaviour:
   locked: {fileID: 0}
   unlocked: 0
   character: {fileID: 1072890256}
+  damage: 0
+  range: 0
+  cooldown: 0
+  feature: 
 --- !u!1 &769266333
 GameObject:
   m_ObjectHideFlags: 0
@@ -5014,7 +5026,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 55.22, y: -54}
+  m_AnchoredPosition: {x: 55.21997, y: -54}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1130956953
@@ -5990,6 +6002,10 @@ MonoBehaviour:
   locked: {fileID: 0}
   unlocked: 0
   character: {fileID: 1294334709}
+  damage: 0
+  range: 0
+  cooldown: 0
+  feature: 
 --- !u!1 &1451605024
 GameObject:
   m_ObjectHideFlags: 0
@@ -11968,6 +11984,10 @@ MonoBehaviour:
   locked: {fileID: 0}
   unlocked: 0
   character: {fileID: 1132841091}
+  damage: 0
+  range: 0
+  cooldown: 0
+  feature: 
 --- !u!1 &1697093109
 GameObject:
   m_ObjectHideFlags: 0
@@ -14609,6 +14629,10 @@ MonoBehaviour:
   locked: {fileID: 0}
   unlocked: 0
   character: {fileID: 565242375}
+  damage: 0
+  range: 0
+  cooldown: 0
+  feature: 
 --- !u!1 &2122168157
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,13 +27,13 @@ public class Health : MonoBehaviour, IDamageable
 
     private void Start()
     {
-        if (transform.childCount > 3)
+        if (transform.childCount == 5)
         {
             _animator = transform.GetChild(4).GetComponent<Animator>();
         }
         else
         {
-            _animator = GetComponentInChildren<Animator>();
+            _animator = transform.GetChild(0).GetComponent<Animator>();
         }
         _healthBar = GetComponent<HealthBar>();
 
@@ -63,7 +63,7 @@ public class Health : MonoBehaviour, IDamageable
         while (elapsTime<0.5f)
         {
            elapsTime += Time.deltaTime;
-            _shield.transform.localScale = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(1.5f, 1.5f, 1.5f), elapsTime / 0.5f);
+            _shield.transform.localScale = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0.7f, 0.7f, 0.7f), elapsTime / 0.5f);
             yield return null;
         }
 
@@ -74,7 +74,7 @@ public class Health : MonoBehaviour, IDamageable
         while (elapsTime < 0.5f)
         {
             elapsTime += Time.deltaTime;
-            _shield.transform.localScale = Vector3.Lerp( new Vector3(1.5f, 1.5f, 1.5f), new Vector3(0, 0, 0), elapsTime / 0.5f);
+            _shield.transform.localScale = Vector3.Lerp( new Vector3(0.7f ,0.7f, 0.7f), new Vector3(0, 0, 0), elapsTime / 0.5f);
             yield return null;
         }
 

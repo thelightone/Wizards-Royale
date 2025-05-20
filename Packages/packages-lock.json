@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.google.external-dependency-manager": {
+      "version": "https://github.com/googlesamples/unity-jar-resolver.git?path=upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "6fa58d3773ef039ea9563454928c235bb308ad8f"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.7",
       "depth": 0,
@@ -232,6 +239,15 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "io.appmetrica.analytics": {
+      "version": "https://github.com/appmetrica/appmetrica-unity-plugin.git#v6.4.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.google.external-dependency-manager": "1.2.183"
+      },
+      "hash": "05ce333a2f0f81ed2e8f3574bde20411e4a86ce6"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",

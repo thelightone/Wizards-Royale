@@ -11,6 +11,12 @@ public class SkinButton : MonoBehaviour
     public bool unlocked;
     public GameObject character;
 
+    [Header("Weapon Data")]
+    public int damage;
+    public int range;
+    public int cooldown;
+    public string feature;
+
     public void Init()
     {
         locked = transform.GetChild(0).gameObject;

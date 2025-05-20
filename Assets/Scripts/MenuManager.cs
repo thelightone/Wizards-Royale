@@ -43,7 +43,9 @@ public class MenuManager : MonoBehaviour
 
     private void Awake()
 
-    {   //Инициализация панели карт
+
+    {
+        //Инициализация панели карт
         forgeBtn.onClick.AddListener(() => ChooseMap(forgeBtn, 1));
         treasureBtn.onClick.AddListener(() => ChooseMap(treasureBtn, 2));
 

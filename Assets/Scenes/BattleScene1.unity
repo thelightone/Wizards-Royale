@@ -8121,6 +8121,10 @@ PrefabInstance:
       propertyPath: 'playersList.Array.data[5]'
       value: 
       objectReference: {fileID: 1817976592}
+    - target: {fileID: 4857330643642395033, guid: 76bf4aa5f42af4c47a1d37fcb8a32709, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6673668986828924249, guid: 76bf4aa5f42af4c47a1d37fcb8a32709, type: 3}
       propertyPath: respawnPoint
       value: 
@@ -8134,7 +8138,8 @@ PrefabInstance:
       value: Camera+Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5740362937625239915, guid: 76bf4aa5f42af4c47a1d37fcb8a32709, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76bf4aa5f42af4c47a1d37fcb8a32709, type: 3}

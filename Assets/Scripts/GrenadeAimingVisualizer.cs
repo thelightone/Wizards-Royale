@@ -18,6 +18,7 @@ public class GrenadeAimingVisualizer : MonoBehaviour
     private GameObject _explosionArea;
     private Vector3[] _trajectoryPoints;
     private bool _isAiming;
+    [SerializeField] private Material _explMaterial;
 
     public void SetLineRenderer(LineRenderer lineRenderer)
     {
@@ -81,23 +82,9 @@ public class GrenadeAimingVisualizer : MonoBehaviour
             Destroy(cylinder);
 
             // Создаем материал с прозрачностью для URP
-            Material material = new Material(Shader.Find("Universal Render Pipeline/Unlit"));
-            material.color = _explosionAreaColor;
-            
-            // Настраиваем прозрачность для URP
-            material.SetFloat("_Surface", 1); // 1 = Transparent
-            material.SetFloat("_Blend", 0); // 0 = Alpha
-            material.SetFloat("_AlphaClip", 0);
-            material.renderQueue = 3000;
-            material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
-            material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
-            material.SetInt("_ZWrite", 0);
-            material.DisableKeyword("_ALPHATEST_ON");
-            material.EnableKeyword("_ALPHABLEND_ON");
-            material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-            material.EnableKeyword("_SURFACE_TYPE_TRANSPARENT");
+           
 
-            meshRenderer.material = material;
+            meshRenderer.material = _explMaterial;
             meshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             meshRenderer.receiveShadows = false;
 
